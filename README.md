@@ -1,1 +1,92 @@
-# Volumedeck-Android
+# Volumedeck SDK
+
+## Overview
+
+Volumedeck SDK provides speed-based audio volume control for Android apps, improving the audio experience for users in vehicles and public transport.
+
+## Key Features
+
+- Speed-Sensitive Volume Adjustment: Automatically adjusts audio volume based on the vehicle's speed for consistent audio levels.
+- Enhanced Safety and Focus: Eliminates the need for manual volume adjustments, enhancing driver safety and passenger convenience.
+- Efficient and Reliable: Real-time speed-based volume control for smooth and uninterrupted listening experiences.
+- Easy Integration: User-friendly API and comprehensive documentation for straightforward implementation.
+- Versatile Applications: Enhances navigation, music streaming, and audio content delivery apps for various vehicles and public transport.
+
+## Getting Started
+
+To use Volumedeck SDK, follow these steps:
+
+1. Import the Volumedeck SDK package into your Kotlin class:
+
+```kotlin
+import com.navideck.volumedeck.Volumedeck
+```
+
+2. Initialize Volumedeck SDK in your activity's `onCreate` method:
+
+```kotlin
+class MainActivity : AppCompatActivity() {
+    private lateinit var volumeDeck: Volumedeck
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        // ....
+
+        // Initialize Volumedeck SDK
+        volumeDeck = Volumedeck(
+            activity = this,
+            runInBackground = true, // Set to false if you don't want to run in the background
+            showStopButtonInNotification = true, // Show stop button in the notification when running in the background
+            showSpeedAndVolumeChangesInNotification = true, // Show speed and volume changes in the notification when running in the background
+            useWakeLock = true, // Use wakelock when running in the background
+            onLocationStatusChange = { status: Boolean ->
+                // Get Location status on/off
+            },
+            onLocationUpdate = { speed: Float, volume: Float ->
+                // Get updates of speed and volume changes
+            }
+        )
+
+        // To Start Volumedeck SDK
+        volumeDeck.start(this)
+
+        // To stop Volumedeck SDK
+        // Call this when you want to stop using Volumedeck SDK (e.g., in onDestroy method)
+        volumeDeck.stop(this)
+    }
+
+    // If `runInBackground` is true, stop Volumedeck SDK after killing the app using onDestroy
+    override fun onDestroy() {
+        volumeDeck.stop(activity)
+        super.onDestroy()
+    }
+
+    // Add this as well to redirect permission results to Volumedeck SDK
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        volumeDeck.onRequestPermissionsResult(requestCode, grantResults, activity)
+    }
+}
+```
+
+## Running in Background
+
+If you want to run Volumedeck SDK in the background, make sure to add the following service declaration to your AndroidManifest.xml file:
+
+```xml
+<application
+    ......
+    <service
+        android:name="com.navideck.volumedeck_android.services.VolumedeckLocationService"
+        android:foregroundServiceType="location"
+        android:enabled="true"
+        android:exported="true" />
+</application>
+```
+
+## Contact
+
+For questions or support, please contact us at team@navideck.com. Thank you for choosing Volumedeck SDK!
