@@ -1,4 +1,4 @@
-# Volumedeck SDK
+# Volumedeck SDK - Android
 
 ## Overview
 
@@ -11,6 +11,8 @@ Volumedeck SDK provides speed-based audio volume control for Android apps, impro
 - Efficient and Reliable: Real-time speed-based volume control for smooth and uninterrupted listening experiences.
 - Easy Integration: User-friendly API and comprehensive documentation for straightforward implementation.
 - Versatile Applications: Enhances navigation, music streaming, and audio content delivery apps for various vehicles and public transport.
+- Seamless integration with hardware volume keys for unified volume control in tandem with Gesturedeck adjustments.
+- Easy integration with UniversalVolume for unified volume control.
 
 ## Getting Started
 
@@ -86,6 +88,12 @@ If you want to run Volumedeck SDK in the background, make sure to add the follow
         android:exported="true" />
 </application>
 ```
+
+## UniversalVolume - Unified Volume Control
+
+An Android library for easy volume control on different devices. Integrates smoothly with Volumedeck for intuitive volume adjustments using pan gestures.
+
+You can use [UniversalVolume](https://github.com/Navideck/Universal-Volume) with Volumedeck. Simply import UniversalVolume, and Volumedeck will automatically use UniversalVolume for changing volume.
 
 ## Contact
 
