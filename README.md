@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
             runInBackground = true, // Set to false if you don't want to run in the background
             showStopButtonInNotification = true, // Show stop button in the notification when running in the background
             showSpeedAndVolumeChangesInNotification = true, // Show speed and volume changes in the notification when running in the background
-            useWakeLock = true, // Use wakelock when running in the background
             onLocationStatusChange = { status: Boolean ->
                 // Get Location status on/off
             },
