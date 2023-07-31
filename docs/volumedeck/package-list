@@ -2,10 +2,18 @@ $dokka.format:html-v1
 $dokka.linkExtension:html
 $dokka.location:com.navideck.volumedeck_android////PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/index.html
 $dokka.location:com.navideck.volumedeck_android/Volumedeck///PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/index.html
-$dokka.location:com.navideck.volumedeck_android/Volumedeck/Volumedeck/#android.app.Activity#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Function1[kotlin.Boolean,kotlin.Unit]?#kotlin.Function2[kotlin.Float,kotlin.Float,kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.String?/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/-volumedeck.html
-$dokka.location:com.navideck.volumedeck_android/Volumedeck/mockSpeed/#android.content.Context#kotlin.Float/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/mock-speed.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/Volumedeck/#android.app.Activity#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Boolean#kotlin.Function1[kotlin.Boolean,kotlin.Unit]?#kotlin.Function2[kotlin.Float,kotlin.Float,kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.String?/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/-volumedeck.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/activationKey/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/activation-key.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/locationServicesStatusChange/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/location-services-status-change.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/onLocationUpdate/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/on-location-update.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/onStart/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/on-start.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/onStop/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/on-stop.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/setMockSpeed/#android.content.Context#kotlin.Float/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/set-mock-speed.html
 $dokka.location:com.navideck.volumedeck_android/Volumedeck/setUniversalVolumeInstance/#com.navideck.universal_volume.UniversalVolume/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/set-universal-volume-instance.html
-$dokka.location:com.navideck.volumedeck_android/Volumedeck/start/#android.app.Activity/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/start.html
-$dokka.location:com.navideck.volumedeck_android/Volumedeck/stop/#android.app.Activity/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/stop.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/showSpeedAndVolumeChangesInNotification/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/show-speed-and-volume-changes-in-notification.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/showStopButtonInNotification/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/show-stop-button-in-notification.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/start/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/start.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/stop/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/stop.html
+$dokka.location:com.navideck.volumedeck_android/Volumedeck/useWakeLock/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/use-wake-lock.html
 com.navideck.volumedeck_android
 
