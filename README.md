@@ -76,7 +76,9 @@ To use the Volumedeck SDK in your Android app, you need to add the following per
 
 These permissions are necessary for the Volumedeck SDK to access the device's location information. The SDK utilizes the device's speed information to adjust the audio volume based on the vehicle's speed.
 
-## Running in Background
+Please note that developers must handle these permissions on their own. The Volumedeck SDK does not handle permission requests directly. It is the responsibility of the app developer to request and handle these permissions in their application code.
+
+### Running in Background
 
 If you want to run Volumedeck SDK in the background, make sure to add the following service declaration to your AndroidManifest.xml file:
 
