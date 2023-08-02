@@ -34,12 +34,14 @@ class MainActivity : AppCompatActivity() {
         // ....
 
         // Initialize Volumedeck SDK
+        // Make sure to ask Location permission, and Notification permission (if running on Android 12+)
         volumeDeck = Volumedeck(
             activity = this,
+            autoStart = true, // Set to false if you don't want to start volumedeck on initialization
             runInBackground = true, // Set to false if you don't want to run in the background
             showStopButtonInNotification = true, // Show stop button in the notification when running in the background
             showSpeedAndVolumeChangesInNotification = true, // Show speed and volume changes in the notification when running in the background
-            onLocationStatusChange = { status: Boolean ->
+            locationServicesStatusChange = { status: Boolean ->
                 // Get Location status on/off
             },
             onLocationUpdate = { speed: Float, volume: Float ->
@@ -60,16 +62,6 @@ class MainActivity : AppCompatActivity() {
         volumeDeck.stop(activity)
         super.onDestroy()
     }
-
-    // Add this as well to redirect permission results to Volumedeck SDK
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        volumeDeck.onRequestPermissionsResult(requestCode, grantResults, activity)
-    }
 }
 ```
 
@@ -81,7 +73,7 @@ If you want to run Volumedeck SDK in the background, make sure to add the follow
 <application
     ......
     <service
-        android:name="com.navideck.volumedeck_android.services.VolumedeckLocationService"
+        android:name="com.navideck.volumedeck_android.VolumedeckBackgroundService"
         android:foregroundServiceType="location"
         android:enabled="true"
         android:exported="true" />
