@@ -14,5 +14,13 @@ $dokka.location:com.navideck.volumedeck_android/Volumedeck/showSpeedAndVolumeCha
 $dokka.location:com.navideck.volumedeck_android/Volumedeck/showStopButtonInNotification/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/show-stop-button-in-notification.html
 $dokka.location:com.navideck.volumedeck_android/Volumedeck/start/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/start.html
 $dokka.location:com.navideck.volumedeck_android/Volumedeck/stop/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/stop.html
+$dokka.location:com.navideck.volumedeck_android/VolumedeckBackgroundService.Companion///PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck-background-service/-companion/index.html
+$dokka.location:com.navideck.volumedeck_android/VolumedeckBackgroundService.Companion/isServiceStarted/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck-background-service/-companion/is-service-started.html
+$dokka.location:com.navideck.volumedeck_android/VolumedeckBackgroundService///PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck-background-service/index.html
+$dokka.location:com.navideck.volumedeck_android/VolumedeckBackgroundService/VolumedeckBackgroundService/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck-background-service/-volumedeck-background-service.html
+$dokka.location:com.navideck.volumedeck_android/VolumedeckBackgroundService/onBind/#android.content.Intent/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck-background-service/on-bind.html
+$dokka.location:com.navideck.volumedeck_android/VolumedeckBackgroundService/onCreate/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck-background-service/on-create.html
+$dokka.location:com.navideck.volumedeck_android/VolumedeckBackgroundService/onDestroy/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck-background-service/on-destroy.html
+$dokka.location:com.navideck.volumedeck_android/VolumedeckBackgroundService/onStartCommand/#android.content.Intent?#kotlin.Int#kotlin.Int/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck-background-service/on-start-command.html
 com.navideck.volumedeck_android
 
