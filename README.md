@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         // ....
 
         // Initialize Volumedeck SDK
-        // Make sure to ask Location permission, and Notification permission (if running on Android 12+)
         volumeDeck = Volumedeck(
             activity = this,
             autoStart = true, // Set to false if you don't want to start volumedeck on initialization
