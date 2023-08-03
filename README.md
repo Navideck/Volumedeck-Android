@@ -36,10 +36,11 @@ class MainActivity : AppCompatActivity() {
         // Initialize Volumedeck SDK
         volumeDeck = Volumedeck(
             activity = this,
+            autoStart = true, // Set to false if you don't want to start volumedeck on initialization
             runInBackground = true, // Set to false if you don't want to run in the background
             showStopButtonInNotification = true, // Show stop button in the notification when running in the background
             showSpeedAndVolumeChangesInNotification = true, // Show speed and volume changes in the notification when running in the background
-            onLocationStatusChange = { status: Boolean ->
+            locationServicesStatusChange = { status: Boolean ->
                 // Get Location status on/off
             },
             onLocationUpdate = { speed: Float, volume: Float ->
@@ -60,20 +61,23 @@ class MainActivity : AppCompatActivity() {
         volumeDeck.stop(activity)
         super.onDestroy()
     }
-
-    // Add this as well to redirect permission results to Volumedeck SDK
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        volumeDeck.onRequestPermissionsResult(requestCode, grantResults, activity)
-    }
 }
 ```
 
-## Running in Background
+## Permissions
+
+To use the Volumedeck SDK in your Android app, you need to add the following permissions to your AndroidManifest.xml file:
+
+```xml
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+```
+
+These permissions are necessary for the Volumedeck SDK to access the device's location information. The SDK utilizes the device's speed information to adjust the audio volume based on the vehicle's speed.
+
+Please note that developers must handle these permissions on their own. The Volumedeck SDK does not handle permission requests directly. It is the responsibility of the app developer to request and handle these permissions in their application code.
+
+### Running in Background
 
 If you want to run Volumedeck SDK in the background, make sure to add the following service declaration to your AndroidManifest.xml file:
 
@@ -81,12 +85,23 @@ If you want to run Volumedeck SDK in the background, make sure to add the follow
 <application
     ......
     <service
-        android:name="com.navideck.volumedeck_android.services.VolumedeckLocationService"
+        android:name="com.navideck.volumedeck_android.VolumedeckBackgroundService"
         android:foregroundServiceType="location"
         android:enabled="true"
         android:exported="true" />
 </application>
 ```
+
+You'll also need to add the following permissions:
+
+```xml
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />.    <!-- Needed for Android 12+ -->
+```
+
+The `FOREGROUND_SERVICE` permission allows the SDK to run as a foreground service, enabling continuous operation even when the app is in the background. The `POST_NOTIFICATIONS` permission is required on Android 12+ to show notifications with speed and volume changes when running the SDK in the background.
+
+Please make sure to add these permissions to your AndroidManifest.xml file to ensure smooth functioning of the Volumedeck SDK in your Android app.
 
 ## UniversalVolume - Unified Volume Control
 
