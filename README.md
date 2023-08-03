@@ -100,7 +100,7 @@ You'll also need to add the following permissions:
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />.    <!-- Needed for Android 12+ -->
 ```
 
-The `FOREGROUND_SERVICE` permission allows the SDK to run as a foreground service, enabling continuous operation even when the app is in the background. The `POST_NOTIFICATIONS` permission is required to show notifications with speed and volume changes when running the SDK in the background.
+The `FOREGROUND_SERVICE` permission allows the SDK to run as a foreground service, enabling continuous operation even when the app is in the background. The `POST_NOTIFICATIONS` permission is required on Android 12+ to show notifications with speed and volume changes when running the SDK in the background.
 
 Please make sure to add these permissions to your AndroidManifest.xml file to ensure smooth functioning of the Volumedeck SDK in your Android app.
 
