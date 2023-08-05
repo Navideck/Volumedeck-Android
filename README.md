@@ -4,6 +4,8 @@
 
 Volumedeck SDK provides speed-based audio volume control for Android apps, improving the audio experience for users in vehicles and public transport.
 
+The Volumedeck SDK works completely offline and requires no internet access.
+
 ## Key Features
 
 - Speed-Sensitive Volume Adjustment: Automatically adjusts audio volume based on the vehicle's speed for consistent audio levels.
@@ -11,20 +13,60 @@ Volumedeck SDK provides speed-based audio volume control for Android apps, impro
 - Efficient and Reliable: Real-time speed-based volume control for smooth and uninterrupted listening experiences.
 - Easy Integration: User-friendly API and comprehensive documentation for straightforward implementation.
 - Versatile Applications: Enhances navigation, music streaming, and audio content delivery apps for various vehicles and public transport.
-- Seamless integration with hardware volume keys for unified volume control in tandem with Gesturedeck adjustments.
+- Seamless integration with hardware volume keys for unified volume control in tandem with Volumedeck adjustments.
 - Easy integration with UniversalVolume for unified volume control.
+- Does not require internet connectivity
 
-## Getting Started
+## Getting Started with Volumedeck
 
 To use Volumedeck SDK, follow these steps:
 
-1. Import the Volumedeck SDK package into your Kotlin class:
+### Add Volumedeck SDK to your project
 
-```kotlin
-import com.navideck.volumedeck.Volumedeck
+Volumedeck SDK can be easily added to your Android project using Jitpack. Jitpack is a package repository service that allows you to use Git repositories as dependencies in your projects.
+
+To add Volumedeck SDK to your project, follow these steps:
+
+1. Open your project's `build.gradle` file.
+
+2. Add the Jitpack repository to the list of repositories:
+
+```groovy
+allprojects {
+    repositories {
+        // ... other repositories ...
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
-2. Initialize Volumedeck SDK in your activity's `onCreate` method:
+3. Open your app module's `build.gradle` file.
+
+4. Add the Volumedeck SDK dependency:
+
+```groovy
+dependencies {
+    implementation 'com.github.Navideck:Volumedeck-Android:1.0.1'
+}
+```
+
+Replace `'1.0.1'` with the latest release version of Volumedeck SDK. You can find the latest version on the [Volumedeck SDK GitHub releases page](https://github.com/Navideck/Volumedeck-Android/releases).
+
+5. Sync your project with Gradle by clicking on "Sync Now" in Android Studio.
+
+Now, Volumedeck SDK is successfully added to your project via Jitpack. You can start using the Volumedeck API in your app as described in the previous sections.
+
+Please note that Jitpack fetches the library directly from the GitHub repository, so you need an active internet connection while building your project. Also, ensure that you are using a version that is compatible with your app's requirements.
+
+### Import Volumedeck
+
+```kotlin
+import com.navideck.Volumedeck_android.Volumedeck
+```
+
+### Initialize Volumedeck
+
+Initialize the Volumedeck SDK in your activity's `onCreate` method:
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
@@ -105,9 +147,17 @@ Please make sure to add these permissions to your AndroidManifest.xml file to en
 
 ## UniversalVolume - Unified Volume Control
 
-An Android library for easy volume control on different devices. Integrates smoothly with Volumedeck for intuitive volume adjustments using pan gestures.
+An Android library for easy volume control on different devices. Integrates smoothly with Volumedeck for intuitive volume adjustment across all devices.
 
 You can use [UniversalVolume](https://github.com/Navideck/Universal-Volume) with Volumedeck. Simply import UniversalVolume, and Volumedeck will automatically use UniversalVolume for changing volume.
+
+## Free to Use
+Volumedeck SDK is free to use, providing you with the full functionality of the SDK without any time limitations. You are welcome to integrate it into both personal and commercial projects. When using Volumedeck SDK for free, a watermark will be presented during runtime. It is strictly prohibited to hide, remove, or alter in any way the watermark from the free version of Volumedeck SDK.
+
+### Activation Key and Watermark Removal
+For those who wish to remove the watermark from their app, we offer an activation key that allows you to use the SDK without any watermarks. However, please be aware that the watermark-free version is not available for free and requires a purchase.
+
+To inquire about purchasing an activation key or if you have any other questions related to licensing and usage, please contact us at team@navideck.com. We will be happy to assist you with the process and provide you with the necessary information.
 
 ## Contact
 
