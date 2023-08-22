@@ -2,9 +2,7 @@
 
 ## Overview
 
-Volumedeck SDK provides speed-based audio volume control for Android apps, improving the audio experience for users in vehicles and public transport.
-
-The Volumedeck SDK works completely offline and requires no internet access.
+Volumedeck provides automatic volume adjustment based on GPS speed, improving the media-listening experience for users in vehicles and public transport.
 
 ## Key Features
 
