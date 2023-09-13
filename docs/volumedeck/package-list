@@ -9,8 +9,6 @@ $dokka.location:com.navideck.volumedeck_android/Volumedeck/onStart/#/PointingToD
 $dokka.location:com.navideck.volumedeck_android/Volumedeck/onStop/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/on-stop.html
 $dokka.location:com.navideck.volumedeck_android/Volumedeck/setMockSpeed/#android.content.Context#kotlin.Float/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/set-mock-speed.html
 $dokka.location:com.navideck.volumedeck_android/Volumedeck/setUniversalVolumeInstance/#com.navideck.universal_volume.UniversalVolume/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/set-universal-volume-instance.html
-$dokka.location:com.navideck.volumedeck_android/Volumedeck/showSpeedAndVolumeChangesInNotification/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/show-speed-and-volume-changes-in-notification.html
-$dokka.location:com.navideck.volumedeck_android/Volumedeck/showStopButtonInNotification/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/show-stop-button-in-notification.html
 $dokka.location:com.navideck.volumedeck_android/Volumedeck/start/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/start.html
 $dokka.location:com.navideck.volumedeck_android/Volumedeck/stop/#/PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck/stop.html
 $dokka.location:com.navideck.volumedeck_android/VolumedeckBackgroundService.Companion///PointingToDeclaration/volumedeck/com.navideck.volumedeck_android/-volumedeck-background-service/-companion/index.html
