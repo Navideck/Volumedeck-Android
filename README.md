@@ -136,7 +136,8 @@ You'll also need to add the following permissions:
 
 ```xml
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />.    <!-- Needed for Android 12+ -->
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" /> <!-- Needed for Android 14+ -->
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />    <!-- Needed for Android 12+ -->
 ```
 
 The `FOREGROUND_SERVICE` permission allows the SDK to run as a foreground service, enabling continuous operation even when the app is in the background. The `POST_NOTIFICATIONS` permission is required on Android 12+ to show notifications with speed and volume changes when running the SDK in the background.
