@@ -1,3 +1,5 @@
-install: 
-  - FILE="-Dfile=volumedeck.aar" 
-  - mvn install:install-file $FILE -DgroupId=com.github.Navideck -DartifactId=AndroidTestLibrary -Dversion=1.4.0 -Dpackaging=aar -DgeneratePom=true
+install:
+  - FILE="volumedeck.aar"
+  - DOC="volumedeck-javadoc.jar"
+  - VERSION="1.4.1"
+  - mvn install:install-file -Dfile=$FILE -Djavadoc=$DOC -DgroupId=com.github.Navideck -DartifactId=VolumedeckAndroid -Dversion=$VERSION -Dpackaging=aar -DgeneratePom=true
