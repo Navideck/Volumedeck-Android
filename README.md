@@ -2,6 +2,10 @@
 
 ## Overview
 
+<p align="center">
+  <img src="https://navideck.com/sites/navideck.com/files/2023-10/Volumedeck%20SDK.png" height=150 />
+</p>
+
 Volumedeck provides automatic volume adjustment based on GPS speed, improving the media-listening experience for users in vehicles and public transport.
 
 ## Key Features
@@ -14,6 +18,7 @@ Volumedeck provides automatic volume adjustment based on GPS speed, improving th
 - Seamless integration with hardware volume keys for unified volume control in tandem with Volumedeck adjustments.
 - Easy integration with UniversalVolume for unified volume control.
 - Does not require internet connectivity
+- Jetpack Compose / XML layout / Kotlin & Java support
 
 ## Getting Started with Volumedeck
 
@@ -44,11 +49,11 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.Navideck:Volumedeck-Android:1.0.1'
+    implementation 'com.github.Navideck:Volumedeck-Android:1.5.0'
 }
 ```
 
-Replace `'1.0.1'` with the latest release version of Volumedeck SDK. You can find the latest version on the [Volumedeck SDK GitHub releases page](https://github.com/Navideck/Volumedeck-Android/releases).
+Replace `'1.5.0'` with the latest release version of Volumedeck SDK. You can find the latest version on the [Volumedeck SDK GitHub releases page](https://github.com/Navideck/Volumedeck-Android/releases).
 
 5. Sync your project with Gradle by clicking on "Sync Now" in Android Studio.
 
@@ -143,6 +148,14 @@ You'll also need to add the following permissions:
 The `FOREGROUND_SERVICE` permission allows the SDK to run as a foreground service, enabling continuous operation even when the app is in the background. The `POST_NOTIFICATIONS` permission is required on Android 12+ to show notifications with speed and volume changes when running the SDK in the background.
 
 Please make sure to add these permissions to your AndroidManifest.xml file to ensure smooth functioning of the Volumedeck SDK in your Android app.
+
+## Java
+
+Volumedeck is fully compatible with `Java`. When using Java you can initialize Volumedeck using:
+
+```java
+Volumedeck volumedeck = new Volumedeck(context);
+```
 
 ## UniversalVolume - Unified Volume Control
 
