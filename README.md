@@ -1,10 +1,10 @@
 # Volumedeck SDK - Android
 
-## Overview
-
 <p align="center">
   <img src="https://navideck.com/sites/navideck.com/files/2023-10/Volumedeck%20SDK.png" height=150 />
 </p>
+
+## Overview
 
 Volumedeck provides automatic volume adjustment based on GPS speed, improving the media-listening experience for users in vehicles and public transport.
 
