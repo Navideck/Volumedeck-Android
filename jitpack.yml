@@ -1,5 +1,5 @@
 install:
   - FILE="volumedeck.aar"
   - DOC="volumedeck-javadoc.jar"
-  - VERSION="1.5.0"
+  - VERSION="1.6.0"
   - mvn install:install-file -Dfile=$FILE -Djavadoc=$DOC -DgroupId=com.github.Navideck -DartifactId=VolumedeckAndroid -Dversion=$VERSION -Dpackaging=aar -DgeneratePom=true

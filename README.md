@@ -49,11 +49,9 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.github.Navideck:Volumedeck-Android:1.5.0'
+    implementation 'com.github.Navideck:Volumedeck-Android:1.6.0'
 }
 ```
-
-Replace `'1.5.0'` with the latest release version of Volumedeck SDK. You can find the latest version on the [Volumedeck SDK GitHub releases page](https://github.com/Navideck/Volumedeck-Android/releases).
 
 5. Sync your project with Gradle by clicking on "Sync Now" in Android Studio.
 
